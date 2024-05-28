@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://www.dafont.com/css?family=Bromph+Town');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family:"Bromph Town", sans-serif;
 }
 
 body {
@@ -359,6 +360,24 @@ a {
         background-color: transparent;
         cursor: pointer;
         border: none;
+    }
+
+     /* Estilos para el carrusel */
+     .carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ajuste de imagen */
+        transition: transform 0.5s; /* Transición al cambiar imagen */
+    }
+
+    .carousel img:hover {
+        transform: scale(1.1); /* Efecto de escala al pasar el mouse */
     }
 }
 
