@@ -245,8 +245,11 @@ a {
 .footer {
     width: 100%;
     padding: 20px 0;
-    background-color: #011C40;
-
+    background-color: #011C40   ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-top: #05C7F2 2px solid;
     box-shadow: 0 0 30px 0 rgba(0, 255, 255, 0.333);
 
@@ -322,7 +325,11 @@ a {
         flex-direction: column;
         justify-content: flex-start;
     }
-
+    .redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .item::before {
         content: '';
         position: absolute;
@@ -354,3 +361,4 @@ a {
         border: none;
     }
 }
+
