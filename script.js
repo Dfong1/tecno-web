@@ -5,18 +5,20 @@ const menu = document.getElementById('burger-menu');
 const rightItems = document.querySelector('.nav-mobile .right-items');
 const containerAll = document.querySelector('.container__all');
 
-menu.addEventListener('click', function() {
-    console.log(rightItems)
-    rightItems.classList.toggle('show');
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.getElementById('burger-menu');
+    const rightItems = document.querySelector('.nav-mobile .right-items');
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+
+    burgerMenu.addEventListener('click', function() {
+        rightItems.classList.toggle('show');
+        overlay.style.display = rightItems.classList.contains('show') ? 'block' : 'none';
+    });
+
+    overlay.addEventListener('click', function() {
+        rightItems.classList.remove('show');
+        overlay.style.display = 'none';
+    });
 });
-
-facebook_icon.addEventListener('click', function() {
-    window.open('https://www.facebook.com/profile.php?id=61559499794684', '_blank')
-})
-
-instagram_icon.addEventListener('click', function() {
-    window.open('https://www.instagram.com/tecnodev12/', '_blank')
-})
-email_icon.addEventListener('click', function() {
-    window.open('mailto:tecnodev12@gmail.com', '_self')
-})
