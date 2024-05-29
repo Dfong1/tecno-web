@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://www.dafont.com/css?family=Bromph+Town');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family:"Montserrat", sans-serif;
 }
 
 body {
@@ -12,6 +13,9 @@ body {
 
 .nav-mobile {
     display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #burger-menu {
@@ -105,8 +109,11 @@ a {
 .containers {
     padding: 15px;
     border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: white;
     box-shadow: 0.2px 0.2px 0.2px 0.2px rgba(0, 0, 0, 0.2);
+    z-index: -1;
 }
 
 .container-projects {
@@ -117,11 +124,13 @@ a {
         "proyecto-uno proyecto-dos"
         "proyecto-tres proyecto-dos";
     gap: 20px;
-    max-width: 1200px; /* Añadido: Limitar el ancho máximo */
-    margin: auto; /* Añadido: Centrar el contenedor */
+    max-width: 1200px; 
+    margin: auto;  
 }
 
+
 #proyecto-uno {
+    margin-top: 30px;
     grid-area: proyecto-uno;
 }
 
@@ -239,7 +248,11 @@ a {
 .footer {
     width: 100%;
     padding: 20px 0;
-    background-color: #011C40;
+    background-color: #011C40   ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-top: #05C7F2 2px solid;
     box-shadow: 0 0 30px 0 rgba(0, 255, 255, 0.333);
     color: white;
@@ -304,13 +317,17 @@ a {
         top: 0;
         left: 0;
         background-color: #011C40;
-        z-index: 999;
+        z-index: 1;
         transition: transform 0.5s ease;
         transform: translateX(-100%);
         flex-direction: column;
         justify-content: flex-start;
     }
-
+    .redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .item::before {
         content: '';
         position: absolute;
@@ -339,4 +356,23 @@ a {
         cursor: pointer;
         border: none;
     }
+
+     /* Estilos para el carrusel */
+     .carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ajuste de imagen */
+        transition: transform 0.5s; /* Transición al cambiar imagen */
+    }
+
+    .carousel img:hover {
+        transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+    }
+}
 }
