@@ -1,0 +1,114 @@
+.container {
+    background-color: white;
+}
+
+.title-project{
+    font-weight: 600;
+    font-size: 52px;
+}
+
+.text-image-project {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-in-image {
+    width: 50%;
+    text-align: justify;
+}
+
+.title-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.list-in-text-image{
+    list-style: none;
+}
+
+.lists-in-text-image {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.tecnologia {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.right {
+    justify-self: flex-end;
+}
+
+.icons-languages{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-around;
+}
+
+.text-with-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.text-with-icon p {
+    font-size: 12px;
+}
+
+
+@media (max-width: 968px) {
+    .text-image-project{
+        flex-direction: column;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .text-in-image {
+        width: 100%;
+    }
+
+    .icons-languages {
+        width: 100%;
+    }
+
+    .lists-in-text-image {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+
+    .list-in-text-image {
+        display: flex;
+        gap: 10px;
+
+        justify-content: space-around;
+
+    }
+
+}
+
+@media (max-width: 555px) {
+    .list-in-text-image {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
