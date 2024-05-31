@@ -32,7 +32,7 @@
                         <path d="M4 18l16 0" />
                     </svg>
                 </button>
-                <div class="right-items ">
+                <div class="right-items">
                     <a href="index.html" class="item"><li>Inicio</li></a>
                     <a href="conocenos.html" class="item"><li>Conócenos</li></a>
                     <a href="#" class="item"><li>Nuestros proyectos</li></a>
@@ -40,15 +40,63 @@
             </ul>
         </nav>
 
-        <h1>Conócenos</h1>
-        <div class="carousel">
-            <img src="img/logo_tecnodev.jpg" alt="Image 1">
-            <img src="img/water-drop.jpg" alt="Image 2">
-            <img src="img/image3.jpg" alt="Image 3">
-            <img src="img/image4.jpg" alt="Image 4">
-            <img src="img/image5.jpg" alt="Image 5">
-            <img src="img/image6.jpg" alt="Image 6">
-        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Card List Section -->
+        <ul class="card-list">
+            <li class="card">
+                <a class="card-image" href="https://www.instagram.com/josevaleroa12/" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-500.jpg">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg" alt="Psychopomp" />
+                </a>
+                <a class="card-description" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank">
+                    <h2>Jose Valero</h2>
+                    <p>Universitario TSU</p>
+                </a>
+            </li>
+
+            <li class="card">
+                <a class="card-image" href="https://www.instagram.com/josevaleroa12/" target="_blank" style="background-image: url(htts://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-500.jpg">
+                    <img src="/img/" alt="let's go" />
+                </a>
+                <a class="card-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
+                    <h2>Daniel Fong</h2>
+                    <p>Universitario TSU</p>
+                </a>
+            </li>
+
+            <li class="card">
+                <a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg" alt="The Beautiful Game" />
+                </a>
+                <a class="card-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
+                    <h2>Armando Varela</h2>
+                    <p>Universitario TSU</p>
+                </a>
+            </li>
+
+            <li class="card">
+                <a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+                </a>
+                <a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
+                    <h2>Jesus Corona</h2>
+                    <p>Universitario TSU</p>
+                </a>
+            </li>
+
+            <li class="card">
+                <a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+                </a>
+                <a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
+                    <h2>Emith Algarate</h2>
+                    <p>Universitario TSU</p>
+                </a>
+            </li>
+        </ul>
 
     </div>
 
@@ -80,15 +128,17 @@
     <script>
         // Script para el carrusel
         let currentIndex = 0;
-        const images = document.querySelectorAll('.carousel img');
+        const images = document.querySelectorAll('.carousel-images img');
         const totalImages = images.length;
 
         function showImage(index) {
             images.forEach((image, i) => {
                 if (i === index) {
-                    image.style.display = 'block';
+                    image.style.opacity = '1';
+                    image.style.transform = 'scale(1.05)';
                 } else {
-                    image.style.display = 'none';
+                    image.style.opacity = '0';
+                    image.style.transform = 'scale(1)';
                 }
             });
         }
@@ -109,7 +159,7 @@
         // Desplazamiento automático
         setInterval(() => {
             nextImage();
-        }, 4500); // Cambiar cada 3 segundos
+        }, 3500); // Cambiar cada 4.5 segundos
     </script>
 </body>
 </html>
