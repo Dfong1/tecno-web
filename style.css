@@ -106,11 +106,10 @@ a {
 .text {
     text-align: justify;
     font-size: 10;
+    color: black;
 }
 
-.container__text {
-    width: 70%;
-}
+
 
 .containers {
     padding: 15px;
@@ -151,6 +150,7 @@ a {
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border: 1px solid transparent;
+    margin: 1rem;
 }
 
 
@@ -333,7 +333,7 @@ a {
     }
 
     .container {
-        width: 70%;
+        width: 90%;
     }
 
     .right-items {
@@ -545,6 +545,14 @@ a {
     margin: 0 0.5rem;
     text-decoration: none; /* Elimina el subrayado */
 }
+/* Lazy Load Styles */
+.card-image {
+	display: block;
+	min-height: 20rem; /* layout hack */
+	background: #fff center center no-repeat;
+	background-size: cover;
+	filter: blur(0px); /* blur the lowres image */
+}
 
 /* Asegurarse de que el tamaño del ícono no se vea afectado por el <a> */
 .socials-media a svg {
@@ -571,4 +579,97 @@ a {
     transition-delay: .2s;
 }
 
-  
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+	display: block;
+	padding: 1em 0.5em;
+	color: #515151;
+	text-decoration: none;
+}
+
+.card-description > h2 {
+	margin: 0 0 0.5em;
+}
+
+.card-description > p {
+	margin: 0;
+}
+
+.card-image img {
+    width: 100%; /* Ajuste para que la imagen ocupe todo el espacio */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.Btn {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(#011C40, #05C7F2); /* Cambio de colores a #011C40 y #05C7F2 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed; /* Cambiado a posición fija */
+    bottom: 20px; /* Alineado en la parte inferior a 20px del borde */
+    right: 20px; /* Alineado a la derecha a 20px del borde */
+    border: none;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s; /* Transición suave de opacidad */
+}
+
+.arrow path {
+    fill: white;
+}
+
+.texts {
+    font-size: 0.7em;
+    width: 100px;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -18px;
+    opacity: 0;
+    transition-duration: .7s;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+    transition-duration: .7s;
+}
+
+.Btn:hover .arrow {
+    animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Agregar regla para mostrar el botón cuando se desplaza hacia abajo */
+.Btn.active {
+    opacity: 1;
+}
+
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0 0 1em;
+    color: #333;
+}
