@@ -91,7 +91,7 @@ a {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 80px;
     margin-bottom: 10px;
     border-radius: 15px;
     padding: 15px;
@@ -354,6 +354,7 @@ a {
     .nav-mobile {
         display: block;
         flex-direction: column;
+
     }
 
     .container {
@@ -459,10 +460,6 @@ a {
   
 /* Image */
 .cards-img {
-    background: #00ff88;
-    background: linear-gradient(to top, #00ff88, #61efff);
-    height: 100%;
-    width: 100%;
     position: absolute;
     transition: transform .3s ease-in-out;
     z-index: 2;
@@ -472,16 +469,15 @@ a {
 .socials-media {
     position: absolute;
     bottom: 0;
+
     display: flex;
     justify-content: center;
     width: 100%;
-    
     transform: translateY(-6em);
     z-index: 3;
 }
   
 .socials-media li {
-    background: #f5f5f5;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -489,7 +485,6 @@ a {
     cursor: pointer;
     opacity: 0;
     transition: all .3s ease-in;
-    margin: 0 0.6rem; /* Espacio entre los íconos */
 }
   
 /* Icons */
@@ -517,10 +512,11 @@ a {
 }
   
 .cards:hover .cards-img {
-    transform: translateY(-5em);
+    transform: translateY(-1.5em);
 }
   
 .cards:hover .socials-media li {
+
     transform: translateY(0);
     opacity: 1;
 }
@@ -537,19 +533,25 @@ a {
     transition-delay: .2s;
 }
 
-/* Restablecer los estilos del <a> para los iconos */
-.socials-media a {
+.socials-media li a {
     display: inline-flex; /* Mantiene la flexibilidad del contenedor */
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background: #f5f5f5;
+    background: black;
     border-radius: 50%;
     cursor: pointer;
     transition: all .3s ease-in;
-    margin: 0 0.5rem;
-    text-decoration: none; /* Elimina el subrayado */
+    margin: 0 0.6rem;
+    text-decoration: none;
+    color: white;
 }
+
+.socials-media li a:visited svg {
+    fill: #ffffff !important;
+    color: white;
+}
+
 /* Lazy Load Styles */
 .card-image {
 	display: block;
@@ -563,12 +565,12 @@ a {
 .socials-media a svg {
     width: 24px !important; /* Tamaño fijo para el ícono */
     height: 24px !important; /* Tamaño fijo para el ícono */
-    fill: #252525;
+    fill: #ffffff !important;
 }
 
 /* Hovers */
 .cards:hover .socials-media a {
-    transform: translateY(0);
+    transform: translateY(-15px);
     opacity: 1;
 }
 
@@ -652,9 +654,7 @@ a {
     transition: opacity 0.3s; 
 }
 
-.arrow path {
-    fill: white;
-}
+
 
 .texts {
     font-size: 0.7em;
