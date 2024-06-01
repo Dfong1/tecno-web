@@ -22,6 +22,40 @@
     object-fit: cover;
 }
 
+.card {
+    padding: 15px;
+}
+
+@media (max-width: 1150px) {
+    .card {
+        flex-direction: column;
+        width: 60%;
+        height: auto;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .image {
+        height: 65%;
+    }
+
+    .image img {
+        height: 100%;
+    }
+
+    .content {
+        height: 35%;
+    }
+}
+
+@media (max-width: 530px) {
+    .card {
+        width: 90%;
+    }
+}
+
+
+
 @media (max-width: 980px) {
     .cards {
         width: 45%;
@@ -36,6 +70,9 @@
 
 @media (max-width: 420px){
     .cards {
+        width: 90%;
+    }
+    .card {
         width: 90%;
     }
 }
