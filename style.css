@@ -695,3 +695,118 @@ p {
     line-height: 1.5em;
     margin: 0 0 1em;
 }
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    width: 45%;
+    min-width: 300px;
+}
+
+.contact-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-subtitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-details-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-details {
+    font-size: 1.1em;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-detail .icon {
+    margin-right: 10px;
+}
+
+.contact-form {
+    width: 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px); /* Ajusta el ancho para que no se desborde */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.contact-form button {
+    width: calc(100% - 20px); /* Ajusta el ancho para que no se desborde */
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .contact-title {
+        text-align: center;
+    }
+
+    .contact-subtitle, .contact-description, .contact-details-title, .contact-details {
+        text-align: center;
+    }
+
+    .contact-form {
+        align-items: center;
+    }
+
+    .contact-form input, .contact-form textarea, .contact-form button {
+        max-width: 100%;
+    }
+}
