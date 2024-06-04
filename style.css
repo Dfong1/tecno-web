@@ -913,10 +913,4 @@ p {
 }
 
 
-@media (max-width: 768px) {
-    .ui-switch:nth-of-type(2) {
-        display: none;
-    }
-}
-
 
