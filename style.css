@@ -911,3 +911,9 @@ p {
     width: 0;
     height: 0;
 }
+
+@media (max-width: 768px) {
+    .ui-switch {
+        display: none; /* Adjust this to target the specific switch you want to hide */
+    }
+  }
