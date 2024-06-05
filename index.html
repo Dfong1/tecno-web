@@ -20,9 +20,9 @@
             </ul>
         </navbar>
 
-        <navbar class="nav nav-mobile">
+        <nav class="nav nav-mobile">
             <ul class="items">
-                <img src="./img/logo_tecnodev.jpg" class="logo" alt="logo-tecnodev">
+                <img src="./img/logo_tecnodev.jpg" class="logo" alt="logo-tecnodev" onclick="window.location.href='index.html';">
                 <button id="burger-menu">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -34,33 +34,32 @@
                 <div class="right-items">
                     <a href="index.html" class="item"><li>Inicio</li></a>
                     <a href="conocenos.html" class="item"><li>Conócenos</li></a>
-                    <a href="#" class="item"><li>Nuestros proyectos</li></a>
+                    <a href="proyectos.html" class="item"><li>Nuestros proyectos</li></a>
                     <a href="contactanos.html" class="item"><li>Contactanos</li></a>
-
                 </div>
             </ul>
             <label class="ui-switch">
-                <input type="checkbox">
+                <input type="checkbox" id="dark-mode-toggle-mobile">
                 <div class="slider">
                   <div class="circle"></div>
                 </div>
               </label>
-        </navbar>
+        </nav>
           
 
         <div class="container">
 
             <label class="ui-switch">
-                <input type="checkbox" id="dark-mode-toggle">
-                <div class="slider">
-                    <div class="circle"></div>
+                <input type="checkbox" id="dark-mode-toggle-desktop" >
+                <div class="slider" >
+                    <div class="circle" ></div>
                 </div>
             </label>
 
             <div class="container-projects">
                 <div id="proyecto-uno"  class="containers" >
                     <h2 style="text-align: center;">Sobre nosotros</h2>
-                    <p class="text" style="color: black;">Somos una empresa emergente fundada por un grupo de estudiantes recién egresados de la carrera de Ingeniería en Software, apasionados por la tecnología y con un firme compromiso con la innovación.</p>
+                    <p class="text">Somos una empresa emergente fundada por un grupo de estudiantes recién egresados de la carrera de Ingeniería en Software, apasionados por la tecnología y con un firme compromiso con la innovación.</p>
                     <br>
                     <p class="text">Nuestra formación académica de vanguardia y nuestra experiencia en proyectos académicos y profesionales nos han preparado para enfrentar desafíos complejos en el ámbito del desarrollo de software.</p>
                     <br>

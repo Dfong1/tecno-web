@@ -11,16 +11,6 @@ body {
     background-color: #f1f1f1;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    
-    
-}
-
-body.dark-mode .container {
-    background-color: #1e1e1e;
-}
-
 .nav-mobile {
     display: none;
 }
@@ -30,7 +20,9 @@ body.dark-mode .container {
     top: 0;
     width: 100%;
     z-index: 1000; /* Asegúrate de que la navegación esté por encima de otros elementos */
+    text-wrap: wrap;
 }
+
 
 #burger-menu {
     display: none;
@@ -46,7 +38,7 @@ body.dark-mode .container {
     border-bottom: 2px solid #05C7F2;
     box-shadow: 0 0 30px 0 rgba(0, 255, 255, 0.333);
     position: relative;
-    z-index: 100; /* Asegúrate de que los elementos interactivos estén accesibles */
+    z-index: 100;
 }
 
 .logo {
@@ -59,7 +51,7 @@ body.dark-mode .container {
 .right-items {
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 45%;
     margin-left: auto;
 }
 
@@ -244,7 +236,7 @@ a {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    color: black;
+    color: black !important;
     text-transform: uppercase;
 }
 
@@ -360,6 +352,10 @@ a {
         display: block;
         flex-direction: column;
 
+    }
+
+    .container .ui-switch {
+        display: none;
     }
 
     .container {
@@ -553,7 +549,7 @@ a {
 }
 
 .socials-media li a:visited svg {
-    fill: #ffffff !important;
+    fill: #ffffff;
     color: white;
 }
 
@@ -564,13 +560,6 @@ a {
 	background: #fff center center no-repeat;
 	background-size: cover;
 	filter: blur(0px); /* blur the lowres image */
-}
-
-/* Asegurarse de que el tamaño del ícono no se vea afectado por el <a> */
-.socials-media a svg {
-    width: 24px !important; /* Tamaño fijo para el ícono */
-    height: 24px !important; /* Tamaño fijo para el ícono */
-    fill: #ffffff !important;
 }
 
 /* Hovers */
@@ -744,6 +733,10 @@ p {
 }
 
 .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 1.1em;
 }
 
@@ -763,6 +756,9 @@ p {
     display: flex;
     flex-direction: column;
     padding: 10px;
+
+    background-color: white;
+    border-radius: 15px;
 }
 
 .contact-form input,
@@ -834,7 +830,7 @@ p {
     --circle-bg: rgb(0, 56, 146);
     --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
     /* positioning */
-    position: absolute;
+    position: fixed;
     top: 85px; /* Ajusta según sea necesario */
     right: 10px; /* Ajusta según sea necesario */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
@@ -912,5 +908,141 @@ p {
     height: 0;
 }
 
+body.light-mode p, 
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4, 
+body.light-mode h5, 
+body.light-mode h6, 
+body.light-mode span,
+body.light-mode div,
+body.dark-mode p, 
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6, 
+body.dark-mode span,
+body.dark-mode div {
+    transition: color 0.5s ease;
+}
+
+body.light-mode .nav .items li {
+    color: white;
+}
+
+body.light-mode p, 
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4, 
+body.light-mode h5, 
+body.light-mode h6, 
+body.light-mode span,
+body.light-mode a
+{
+    color: black;
+}
+
+body.light-mode .containers{
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+
+body.light-mode .cards{
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+}
+
+body.dark-mode .containers{
+    background-color: #181818;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode p, 
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6, 
+body.dark-mode span,
+body.dark-mode a{
+    color: white;
+    transition: color 0.5s ease;
+}
+
+body.dark-mode .containers .card {
+    background-color: black;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode, body.light-mode {
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode .cards {
+    background-color: black;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode .cards .socials-media li a {
+    background-color: white;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode .cards .socials-media a svg {
+    width: 24px ; /* Tamaño fijo para el ícono */
+    height: 24px ; /* Tamaño fijo para el ícono */
+    fill: #000000 ;
+    color: black ;
+    transition: fill 0.5s ease, color 0.5s ease;
+}
+
+body.light-mode .cards .socials-media a svg {
+    width: 24px !important; /* Tamaño fijo para el ícono */
+    height: 24px !important; /* Tamaño fijo para el ícono */
+    fill: #ffffff ;
+    color: white ;
+    transition: fill 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode .card{
+    background-color: #181818;
+    transition: background-color 0.5s ease;
+}
+
+body.light-mode .card{
+    background-color: #ffff;
+    transition: background-color 0.5s ease;
+}
+
+body.light-mode .container .card .content .action {
+    color: white;
+}
+
+body.dark-mode .contact-form {
+    background-color: #181818;
+    transition: background-color 0.5s ease;
+
+}
 
 
+
+body.dark-mode .contact-form button {
+    background-color: #05C7F2;
+    color: black;
+    transition: background-color 0.5s ease;
+}
+
+body.light-mode .contact-form button {
+    background-color: #011C40;
+    color: white;
+    transition: background-color 0.5s ease;
+}
