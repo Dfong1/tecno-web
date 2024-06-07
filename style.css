@@ -961,7 +961,7 @@ body.dark-mode {
 }
 
 body.dark-mode .containers{
-    background-color: #181818;
+    background-color: #202020;
     transition: background-color 0.5s ease;
 }
 
@@ -1014,7 +1014,7 @@ body.light-mode .cards .socials-media a svg {
 }
 
 body.dark-mode .card{
-    background-color: #181818;
+    background-color: #202020;
     transition: background-color 0.5s ease;
 }
 
@@ -1028,7 +1028,7 @@ body.light-mode .container .card .content .action {
 }
 
 body.dark-mode .contact-form {
-    background-color: #181818;
+    background-color: #202020;
     transition: background-color 0.5s ease;
 
 }
