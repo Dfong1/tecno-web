@@ -69,23 +69,39 @@ function lazyLoad() {
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const toggleSwitch = document.getElementById('dark-mode-toggle');
+    const toggleSwitchMobile = document.getElementById('dark-mode-toggle-mobile');
+    const toggleSwitchDesktop = document.getElementById('dark-mode-toggle-desktop');
     const currentTheme = localStorage.getItem('theme');
 
     if (currentTheme) {
         document.body.classList.add(currentTheme);
         if (currentTheme === 'dark-mode') {
-            toggleSwitch.checked = true;
+            toggleSwitchMobile.checked = true;
+            toggleSwitchDesktop.checked = true;
         }
     }
 
-    toggleSwitch.addEventListener('change', function() {
+    toggleSwitchMobile.addEventListener('change', function() {
         if (this.checked) {
             document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode')
             localStorage.setItem('theme', 'dark-mode');
         } else {
             document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode')
             localStorage.setItem('theme', 'light-mode');
         }
     });
+
+    toggleSwitchDesktop.addEventListener('change', function() {
+        if (this.checked) {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode')
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode')
+            localStorage.setItem('theme', 'light-mode');
+        }
+    })
 });
